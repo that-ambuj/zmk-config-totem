@@ -4,5 +4,5 @@ include:
   - board: seeeduino_xiao_ble
     shield: totem_right
   - board: seeeduino_xiao_ble
-    shield: totem_left_dongle prospector_adapter
+    shield: totem_dongle prospector_adapter
 # there is no settingsreset (needed) for the XIAO
