@@ -21,15 +21,15 @@
 #define ADJUST 3
 
 &mt {
-    tapping-term-ms = <160>;
+    tapping-term-ms = <170>;
     quick-tap-ms = <150>;
     flavor = "balanced";
 };
 
 &lt {
-    tapping-term-ms = <160>,
+    tapping-term-ms = <170>,
     flavor = "balanced";
-}
+};
 
 / {
     combos {
