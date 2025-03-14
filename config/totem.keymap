@@ -38,16 +38,26 @@
             label = "HOMEROW_MODS";
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <170>;
-            quick-tap-ms = <180>;
+            tapping-term-ms = <160>;
+            quick-tap-ms = <200>;
+            bindings = <&kp>, <&kp>;
+        };
+
+        rpi: require_prior_idle {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <160>;
+            quick-tap-ms = <200>;
+            require-prior-idle-ms = <50>;
             bindings = <&kp>, <&kp>;
         };
     };
- 
+
     combos {
         compatible = "zmk,combos";
     };
-    
+
     conditional_layers {
         compatible = "zmk,conditional-layers";
         tri_layer {
@@ -82,7 +92,7 @@
 
             bindings = <
        &kp Q       &kp W       &kp E        &kp R        &kp T        &kp Y    &kp U        &kp I        &kp O       &kp P
-       &hm LGUI A  &hm LALT S  &hm LCTRL D  &hm LSHFT F  &kp G        &kp H    &hm RSHFT J  &hm RCTRL K  &hm LALT L  &hm RGUI SEMI
+       &rpi LGUI A  &rpi LALT S  &hm LCTRL D  &hm LSHFT F  &kp G        &kp H    &hm RSHFT J  &hm RCTRL K  &rpi LALT L  &rpi RGUI SEMI
 &kp GRAVE  &kp Z       &kp X       &kp C        &kp V        &kp B        &kp N    &kp M        &kp COMMA    &kp DOT     &kp FSLH       &kp SINGLE_QUOTE
                                &kp DEL      &lt LOWER TAB  &kp RET    &kp SPACE  &lt RAISE ESC  &kp BSPC
             >;
