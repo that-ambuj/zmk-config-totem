@@ -27,7 +27,7 @@
 };
 
 &lt {
-    tapping-term-ms = <160>;
+    tapping-term-ms = <150>;
     flavor = "tap-preferred";
 };
 
@@ -43,13 +43,13 @@
             bindings = <&kp>, <&kp>;
         };
 
-        sht_hm: shift_homerow_mod {
+        sht_hm: short_homerow_mods {
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS";
             #binding-cells = <2>;
             // imitates permissive hold
             flavor = "balanced";
-            tapping-term-ms = <150>;
+            tapping-term-ms = <140>;
             quick-tap-ms = <150>;
             bindings = <&kp>, <&kp>;
         };
