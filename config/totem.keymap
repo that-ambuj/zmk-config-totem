@@ -47,8 +47,8 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS";
             #binding-cells = <2>;
-            // imitates permissive hold
-            flavor = "balanced";
+            // imitates hold on other key press
+            flavor = "hold-preferred";
             tapping-term-ms = <140>;
             quick-tap-ms = <150>;
             bindings = <&kp>, <&kp>;
